@@ -1,0 +1,29 @@
+<!DOCTYPE html>
+<html>
+  <head>
+    <meta charset="utf-8">
+    <title>DONT KILL BEE</title>
+    <link rel="stylesheet" href="../STYLES/game.css">
+    <link rel="shortcut icon" href="../IMAGENS/pernilongo.png"/>
+    <script src="../JS/game.js"></script>    
+  </head>
+  <body onresize="tamanhoTela()">
+    <div class="painel">
+      <div class="vidas">
+        <img id="v1" draggable="false" src="../IMAGENS/coracao_cheio.png">
+        <img id="v2" draggable="false" src="../IMAGENS/coracao_cheio.png">
+        <img id="v3" draggable="false" src="../IMAGENS/coracao_cheio.png">
+      </div>
+      <div class="cronometro">
+        Tempo restante: <span id="tempoJogo"></span>
+      </div>
+    </div>
+    <script>
+      document.getElementById('tempoJogo').innerHTML = tempo;
+      criarMosquitos = setInterval(() => {
+        gerarMosquito();
+        gerarAbelhas();
+      }, 2000);
+    </script>
+  </body>
+</html>
